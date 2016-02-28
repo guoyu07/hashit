@@ -5,3 +5,8 @@ Homestead.json
 .env
 .phpcd
 composer.lock
+public/css
+public/img
+public/js
+public/font
+assets.json
