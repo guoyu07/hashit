@@ -15,8 +15,8 @@ const fixUrl = function() {
             url = url.split('?')[0];
             _path = path.normalize(path.dirname(file.path) + '/' + url);
             _path = path.relative(process.cwd(), _path);
-            var hashed_path = path.dirname(url) + '/' + path.basename(hash[_path].path);
-            return "url('" + hashed_path + "')";
+            var hashedPath = path.dirname(url) + '/' + path.basename(hash[_path].path);
+            return "url('" + path.resolve('/assets', hashedPath) + "')";
         });
         file.contents = new Buffer(contents);
 
